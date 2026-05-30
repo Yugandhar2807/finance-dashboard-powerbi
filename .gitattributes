@@ -1,0 +1,29 @@
+# Normalize line endings on commit
+* text=auto
+
+# Source — force LF
+*.cs        text eol=lf
+*.csproj    text eol=lf
+*.json      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.md        text eol=lf
+*.sql       text eol=lf
+*.dax       text eol=lf
+*.bim       text eol=lf
+
+# Power BI files — Git LFS
+*.pbix      filter=lfs diff=lfs merge=lfs -text
+*.pbit      filter=lfs diff=lfs merge=lfs -text
+*.xlsx      filter=lfs diff=lfs merge=lfs -text
+
+# Binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.pdf       binary
+*.zip       binary
+
+# GitHub Linguist hints
+docs/**     linguist-documentation
+samples/**  linguist-vendored
